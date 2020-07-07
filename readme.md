@@ -1,3 +1,3 @@
-npm install -g resume-cli  
-npm install -g jsonresume-theme-classy  
-resume export resume --format html --theme classy  
+npm install resume-cli  
+npm install jsonresume-theme-classy  
+resume export index --format html --theme classy  
