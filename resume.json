@@ -1,0 +1,122 @@
+{
+    "basics": {
+        "name": "Calvin Leung",
+        "label": "Software Engineer",
+        "_picture": "",
+        "email": "CalvinL.Work@gmail.com",
+        "phone": "(415) 867-3128",
+        "website": "https://github.com/calvin-leung",
+        "summary": "Software Enginner working in the San Francisco Bay Area. He has earned a degree in computer engineering from San Jose State University. Currently working as a software engineer at Verge Inc. Works on a number of web app intergrations with partner companies using PHP and Python.",
+        "location": {
+            "_address": "",
+            "postalCode": "CA 94116",
+            "city": "San Francisco",
+            "countryCode": "US",
+            "region": "California"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "calvin-leung",
+                "url": "https://github.com/calvin-leung"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Verge Inc",
+            "position": "Software Engineer",
+            "website": "https://webhr.co/",
+            "startDate": "2018-12-01",
+            "_endDate": "Present",
+            "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
+            "highlights": [
+                "Developed backend integrations with web services such as Uber, Lyft, Google Drive, and Microsoft Office 365",
+                "Used REST APIs and PHP/Python to create a number of different web applications",
+                "Worked closely with partner companies to implement cross platform features"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "San Jose State University",
+            "area": "Computer Engineering",
+            "studyType": "Bachelor",
+            "_startDate": "2009-06-01",
+            "endDate": "2017-12-01",
+            "_gpa": "3.0",
+            "_courses": [
+                "DB1101 - Basic SQL",
+                "CS2011 - Java Introduction"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Languages",
+            "_level": "Master",
+            "keywords": [
+                "Assembly",
+                "Verilog",
+                "Swift",
+                "C++",
+                "C#",
+                "C",
+                "Java",
+                "Python",
+                "Ruby",
+                "Lua",
+                "XML",
+                "JSON",
+                "HTML",
+                "CSS",
+                "PHP",
+                "Javascript"
+            ]
+        },
+        {
+            "name": "Libraries/Frameworks",
+            "_level": "Master",
+            "keywords": [
+                "REST API",
+                "MySQL",
+                "MongoDB",
+                "Git",
+                "Django",
+                "NodeJS",
+                "Flask",
+                "Docker",
+                "AWS",
+                "Nginx"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "Chinese",
+            "fluency": "Basic understanding"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Game Development",
+            "keywords": [
+                "Unity3d",
+                "Love2d",
+                "Procedural generation"
+            ]
+        },
+        {
+            "name": "Self-Hosting",
+            "keywords": [
+                "Network attached storages",
+                "Virtual machines",
+                "Linux servers"
+            ]
+        }
+    ]
+}
