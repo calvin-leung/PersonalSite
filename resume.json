@@ -6,10 +6,7 @@
         "email": "CalvinL.Work@gmail.com",
         "phone": "(415) 867-3128",
         "website": "https://calvinl.net/",
-        "summary": "Software Enginner working in the San Francisco Bay Area. \
-                    He has earned a degree in computer engineering from San Jose State University. \
-                    Currently working as a software engineer at Verge Inc. \
-                    Works on a number of web app intergrations with partner companies using PHP and Python.",
+        "summary": "Software Enginner working in the San Francisco Bay Area. He has earned a degree in computer engineering from San Jose State University. Currently working as a software engineer at GraphWear developing internal data monitoring tools using Ruby, Swift, and Python.",
         "location": {
             "_address": "",
             "postalCode": "CA 94116",
@@ -27,11 +24,22 @@
     },
     "work": [
         {
+            "company": "Graphwear",
+            "position": "Software Engineer",
+            "website": "http://www.graphwear.co/",
+            "startDate": "2021-10-01",
+            "_endDate": "Present",
+            "summary": "The world's first needle-free continuous glucose monitoring wearable.",
+            "highlights": [
+                
+            ]
+        },
+        {
             "company": "Verge Inc",
             "position": "Software Engineer",
             "website": "https://webhr.co/",
             "startDate": "2018-12-01",
-            "_endDate": "Present",
+            "_endDate": "2021-10-01",
             "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
             "highlights": [
                 "Developed backend integrations with web services such as Uber, Lyft, Google Drive, and Microsoft Office 365",
