@@ -31,7 +31,9 @@
             "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
-                
+                "Developed internal tools to log and analyse client medical data",
+                "Wrote web and iOS MES (manufacturing execution system) tools",
+                "Maintained R&D and data science servers"
             ]
         },
         {
@@ -91,6 +93,7 @@
             "keywords": [
                 "REST API",
                 "MySQL",
+                "PostgreSQL",
                 "MongoDB",
                 "Git",
                 "Django",
@@ -98,7 +101,8 @@
                 "Flask",
                 "Docker",
                 "AWS",
-                "Nginx"
+                "Nginx",
+                "Ruby on Rails"
             ]
         }
     ],
