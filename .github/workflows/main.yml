@@ -1,0 +1,21 @@
+name: Export to HTML
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+  
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download requirements
+        run: |
+          npm install -g resume-cli
+          npm install jsonresume-theme-classy
+
+      - name: Export the html file
+        run: |
+          resume export index --format html --theme classy
