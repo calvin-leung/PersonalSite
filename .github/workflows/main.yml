@@ -19,3 +19,15 @@ jobs:
       - name: Export the html file
         run: |
           resume export index --format html --theme classy
+
+      - name: Commit files
+        run: |
+          git config --local user.name "github-actions"
+          git add index.html
+          git commit -m "Updating index"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
