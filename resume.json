@@ -4,7 +4,7 @@
         "label": "Software Engineer",
         "_picture": "",
         "email": "CalvinL.Work@gmail.com",
-        "phone": "(415) 867-3128",
+        "phone": "(209) 666-4419",
         "website": "https://calvinl.net/",
         "summary": "Software Enginner working in the San Francisco Bay Area. He has earned a degree in computer engineering from San Jose State University. Currently working as a software engineer at GraphWear developing internal data monitoring tools using Ruby, Swift, and Python.",
         "location": {
@@ -31,7 +31,7 @@
             "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
-                "Developed internal tools to log and analyse client medical data",
+                "Developed internal tools to log and analyze client medical data",
                 "Wrote web and iOS MES (manufacturing execution system) tools",
                 "Maintained R&D and data science servers"
             ]
