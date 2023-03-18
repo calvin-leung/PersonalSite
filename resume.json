@@ -28,7 +28,7 @@
             "position": "Software Engineer",
             "website": "http://www.graphwear.co/",
             "startDate": "2021-10-01",
-            "endDate": "Present",
+            "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
                 "Developed internal tools to log and analyse client medical data",
