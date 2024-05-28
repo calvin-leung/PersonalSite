@@ -5,8 +5,8 @@
         "_picture": "",
         "email": "CalvinL.Work@gmail.com",
         "phone": "(209) 666-4419",
-        "website": "https://calvinl.net/",
-        "summary": "Software Enginner working in the San Francisco Bay Area. He has earned a degree in computer engineering from San Jose State University. Currently working as a software engineer at GraphWear developing internal data monitoring tools using Ruby, Swift, and Python.",
+        "website": "https://www.CalvinL.net",
+        "summary": "Innovative Software Engineer based in the San Francisco Bay Area with a degree in Computer Engineering from San Jose State University. Currently contributing to GraphWear as a Software Engineer, specializing in developing sophisticated internal data monitoring tools utilizing Ruby, Swift, and Python.",
         "location": {
             "_address": "",
             "postalCode": "CA 94116",
@@ -24,16 +24,16 @@
     },
     "work": [
         {
-            "company": "Graphwear",
-            "position": "Software Engineer",
+            "company": "GraphWear Technologies Inc.",
+            "position": "Senior Software Engineer",
             "website": "http://www.graphwear.co/",
             "startDate": "2021-10-01",
             "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
-                "Developed internal tools to log and analyze client medical data",
-                "Wrote web and iOS MES (manufacturing execution system) tools",
-                "Maintained R&D and data science servers"
+                "Created internal tools for logging and analyzing clients' medical data.",
+                "Designed the company's MES system to track MPIs for iOS and Web platforms.",
+                "Managed and maintained servers supporting R&D databases and data science tasks."
             ]
         },
         {
@@ -44,9 +44,9 @@
             "endDate": "2021-10-01",
             "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
             "highlights": [
-                "Developed backend integrations with web services such as Uber, Lyft, Google Drive, and Microsoft Office 365",
-                "Used REST APIs and PHP/Python to create a number of different web applications",
-                "Worked closely with partner companies to implement cross platform features"
+                "Integrated backend systems with web services like Uber, Lyft, Google Drive, and Microsoft Office 365.",
+                "Developed diverse web applications using REST APIs and PHP.",
+                "Collaborated with partner companies to implement cross-platform features."
             ]
         }
     ],
@@ -69,40 +69,34 @@
             "name": "Languages",
             "_level": "Master",
             "keywords": [
-                "Assembly",
-                "Verilog",
                 "Swift",
-                "C++",
-                "C#",
-                "C",
-                "Java",
-                "Python",
                 "Ruby",
+                "Javascript",
+                "Python",
+                "C#",
+                "Java",
                 "Lua",
                 "XML",
                 "JSON",
                 "HTML",
-                "CSS",
-                "PHP",
-                "Javascript"
+                "CSS"
             ]
         },
         {
             "name": "Libraries/Frameworks",
             "_level": "Master",
             "keywords": [
-                "REST API",
-                "MySQL",
+                "iOS Development",
+                "Web Development",
+                "Ruby on Rails",
                 "PostgreSQL",
-                "MongoDB",
-                "Git",
-                "Django",
-                "NodeJS",
-                "Flask",
                 "Docker",
                 "AWS",
-                "Nginx",
-                "Ruby on Rails"
+                "Git Version Control",
+                "Networking (RESTful APIs, JSON)",
+                "Third-party API Integration",
+                "Agile",
+                "Unit Testing"
             ]
         }
     ],
@@ -118,19 +112,20 @@
     ],
     "interests": [
         {
+            "name": "Self-Hosting",
+            "keywords": [
+                "Open-source",
+                "Sys Admin",
+                "Virtual Machines",
+                "Docker"
+            ]
+        },
+        {
             "name": "Game Development",
             "keywords": [
                 "Unity3d",
                 "Love2d",
                 "Procedural generation"
-            ]
-        },
-        {
-            "name": "Self-Hosting",
-            "keywords": [
-                "Network attached storages",
-                "Virtual machines",
-                "Linux servers"
             ]
         }
     ]
