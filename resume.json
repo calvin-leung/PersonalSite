@@ -31,9 +31,9 @@
             "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
-                "Created internal tools for logging and analyzing clients' medical data.",
-                "Designed the company's MES system to track MPIs for iOS and Web platforms.",
-                "Managed and maintained servers supporting R&D databases and data science tasks."
+                "Designed and delivered on numerous key internal tools for logging and analyzing clients' medical data in real-time across the globe.",
+                "Sole designer/programmer for several iterations of the company's MES system for iOS and Web platforms, designed to be robust and efficient in an fast paced environment.",
+                "Managed and maintained servers supporting R&D databases and data processing tasks critical to company workflows."
             ]
         },
         {
@@ -44,9 +44,9 @@
             "endDate": "2021-10-01",
             "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
             "highlights": [
-                "Integrated backend systems with web services like Uber, Lyft, Google Drive, and Microsoft Office 365.",
-                "Developed diverse web applications using REST APIs and PHP.",
-                "Collaborated with partner companies to implement cross-platform features."
+                "Collaborated with partner companies to implement cross-platform features and integrations.",
+                "Single-handedly design, implemented, and deployed company payroll/taxes system for all of US and Canada.",
+                "Lead the company in key cybersecurity certifications and implementation."
             ]
         }
     ],
