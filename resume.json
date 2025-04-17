@@ -2,13 +2,11 @@
     "basics": {
         "name": "Calvin Leung",
         "label": "Software Engineer",
-        "_picture": "",
         "email": "CalvinL.Work@gmail.com",
         "phone": "(209) 666-4419",
         "website": "https://www.CalvinL.net",
-        "summary": "Innovative Software Engineer based in the San Francisco Bay Area with a degree in Computer Engineering from San Jose State University. Currently contributing to GraphWear as a Software Engineer, specializing in developing sophisticated internal data monitoring tools utilizing Ruby, Swift, and Python.",
+        "summary": "Innovative Software Engineer with 5+ years of experience in developing scalable software solutions, specializing in data-driven systems and cross-platform applications. Proficient in full-stack development using Swift, Ruby, Python, and JavaScript, with expertise in building real-time data pipelines, iOS apps, and cloud-based infrastructure on AWS. Expertise in automating complex workflows, optimizing processes, and delivering scalable solutions.",
         "location": {
-            "_address": "",
             "postalCode": "CA 94116",
             "city": "San Francisco",
             "countryCode": "US",
@@ -28,12 +26,13 @@
             "position": "Senior Software Engineer",
             "website": "http://www.graphwear.co/",
             "startDate": "2021-10-01",
-            "_endDate": "Present",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
             "highlights": [
-                "Designed and delivered on numerous key internal tools for logging and analyzing clients' medical data in real-time across the globe.",
-                "Sole designer/programmer for several iterations of the company's MES system for iOS and Web platforms, designed to be robust and efficient in an fast paced environment.",
-                "Managed and maintained servers supporting R&D databases and data processing tasks critical to company workflows."
+                "Worked on critical internal web dashboards, allowing teams to monitor and parse millions of data points in real-time across 7+ days.",
+                "Designed and built iOS application for company's manufacturing execution system (MES), enabling teams to track and log every step of the manufacturing process, reducing manual data entry by 10x.",
+                "Developed a scalable and adaptable data pipeline from bluetooth device, to iOS app, to API server capable of ingesting up to 200 million data points a year.",
+                "Collaborated with hardware and data engineering teams to develop a robust protocol for sending real-time data wirelessly between the hardware and iOS app, enabling a 15x increase in data throughput.",
+                "Created a python-based web server responsible for parsing millions of data points and automating tasks performed by the data science team, greatly reducing manual workload for the entire company."
             ]
         },
         {
@@ -44,9 +43,9 @@
             "endDate": "2021-10-01",
             "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
             "highlights": [
-                "Collaborated with partner companies to implement cross-platform features and integrations.",
-                "Single-handedly design, implemented, and deployed company payroll/taxes system for all of US and Canada.",
-                "Lead the company in key cybersecurity certifications and implementation."
+                "Collaborated with 20+ partner companies to implement cross-platform features and integrations, creating seamless syncing between the two platforms.",
+                "Single-handedly design, implemented, and deployed company payroll/taxes system for all US and Canadian clients.",
+                "Lead the company in key cybersecurity certifications and implementations, netting the company several key clients."
             ]
         }
     ],
