@@ -65,8 +65,7 @@
     ],
     "skills": [
         {
-            "name": "Languages",
-            "_level": "Master",
+            "name": "Programming Languages",
             "keywords": [
                 "Swift",
                 "Ruby",
@@ -74,26 +73,71 @@
                 "Python",
                 "C#",
                 "Java",
-                "Lua",
-                "XML",
-                "JSON",
-                "HTML",
-                "CSS"
+                "Lua"
             ]
         },
         {
-            "name": "Libraries/Frameworks",
-            "_level": "Master",
+            "name": "Web Development",
             "keywords": [
-                "iOS Development",
-                "Web Development",
                 "Ruby on Rails",
+                "Javascript",
+                "HTML/CSS",
+                "Vue",
+                "Flask",
+                "Django",
+                "Node.js",
+                "JSON"
+            ]
+        },
+        {
+            "name": "iOS Development",
+            "keywords": [
+                "Swift",
+                "Objective-C",
+                "UIKit",
+                "SwiftUI",
+                "Core Data",
+                "Xcode",
+                "Core Bluetooth"
+            ]
+        },
+        {
+            "name": "Databases",
+            "keywords": [
                 "PostgreSQL",
+                "SQLite",
+                "MySQL",
+                "MongoDB",
+                "Redis"
+            ]
+        },
+        {
+            "name": "Cloud Computing",
+            "keywords": [
                 "Docker",
                 "AWS",
-                "Git Version Control",
-                "Networking (RESTful APIs, JSON)",
-                "Third-party API Integration",
+                "EC2",
+                "ECS",
+                "RDS",
+                "VMs",
+                "VPS"
+            ]
+        },
+        {
+            "name": "Networking",
+            "keywords": [
+                "RESTful APIs",
+                "JSON",
+                "Bluetooth"
+            ]
+        },
+        {
+            "name": "Tools/Frameworks",
+            "keywords": [
+                "Git",
+                "VSCode",
+                "Version Control",
+                "AI",
                 "Agile",
                 "Unit Testing"
             ]
