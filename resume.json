@@ -5,7 +5,7 @@
         "email": "CalvinL.Work@gmail.com",
         "phone": "(209) 666-4419",
         "website": "https://www.CalvinL.net",
-        "summary": "Innovative Software Engineer with 5+ years of experience in developing scalable software solutions, specializing in data-driven systems and cross-platform applications. Proficient in full-stack development using Swift, Ruby, Python, and JavaScript, with expertise in building real-time data pipelines, iOS apps, and cloud-based infrastructure on AWS. Expertise in automating complex workflows, optimizing processes, and delivering scalable solutions.",
+        "summary": "Software Engineer with 7+ years building reliable, high-scale systems across full-stack web, iOS, and data engineering. Delivered real-time infrastructure, cross-platform apps, and automation tools used across hundreds of clients. Proven track record delivering high-impact features — from real-time chat systems handling millions of messages to iOS manufacturing apps and data pipelines processing 200M+ data points annually.",
         "location": {
             "postalCode": "CA 94116",
             "city": "San Francisco",
@@ -21,6 +21,19 @@
         ]
     },
     "work": [
+        {
+            "company": "Teambridge",
+            "position": "Software Engineer",
+            "website": "https://www.teambridge.com/",
+            "startDate": "2025-10-01",
+            "summary": "Workforce management built for the frontline.",
+            "highlights": [
+                "Designed and shipped real-time chat system supporting over 5 million individual messages and led zero-downtime backfill job to migrate historical data",
+                "Led major refactor of timeoff system, delivering critical features with over 90 million entries over 300+ clients. 10x improvement in performance after refactor",
+                "Worked on complex automation system. Enables over 25,000 different automations that unlocks new workflows for customer",
+                "System wide optimizations & bug fixes touching nearly every major product surface. Consistent bug fix and polish work alongside feature delivery (regressions, edge cases, database performance)"
+            ]
+        },
         {
             "company": "GraphWear Technologies Inc.",
             "position": "Senior Software Engineer",
@@ -67,25 +80,30 @@
         {
             "name": "Programming Languages",
             "keywords": [
+                "Kotlin",
+                "Python",
+                "Java",
                 "Swift",
                 "Ruby",
+                "PHP",
                 "Javascript",
-                "Python",
                 "C#",
-                "Java",
                 "Lua"
             ]
         },
         {
             "name": "Web Development",
             "keywords": [
-                "Ruby on Rails",
+                "React",
+                "Node.js",
+                "TypeScript",
                 "Javascript",
+                "Ruby on Rails",
                 "HTML/CSS",
                 "Vue",
+                "FastAPI",
                 "Flask",
                 "Django",
-                "Node.js",
                 "JSON"
             ]
         },
@@ -120,7 +138,8 @@
                 "ECS",
                 "RDS",
                 "VMs",
-                "VPS"
+                "VPS",
+                "Websockets"
             ]
         },
         {
@@ -128,7 +147,8 @@
             "keywords": [
                 "RESTful APIs",
                 "JSON",
-                "Bluetooth"
+                "Bluetooth",
+                "Websockets"
             ]
         },
         {
@@ -139,7 +159,8 @@
                 "Version Control",
                 "AI",
                 "Agile",
-                "Unit Testing"
+                "Unit Testing",
+                "LLM"
             ]
         }
     ],
@@ -160,7 +181,8 @@
                 "Open-source",
                 "Sys Admin",
                 "Virtual Machines",
-                "Docker"
+                "Docker",
+                "LLMs"
             ]
         },
         {
