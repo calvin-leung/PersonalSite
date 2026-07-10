@@ -4,10 +4,9 @@
         "label": "Software Engineer",
         "email": "CalvinL.Work@gmail.com",
         "phone": "(209) 666-4419",
-        "website": "https://www.CalvinL.net",
+        "url": "https://www.calvinl.net",
         "summary": "Software Engineer with 7+ years building reliable, high-scale systems across full-stack web, iOS, and data engineering. Delivered real-time infrastructure, cross-platform apps, and automation tools used across hundreds of clients. Proven track record delivering high-impact features — from real-time chat systems handling millions of messages to iOS manufacturing apps and data pipelines processing 200M+ data points annually.",
         "location": {
-            "postalCode": "CA 94116",
             "city": "San Francisco",
             "countryCode": "US",
             "region": "California"
@@ -22,9 +21,9 @@
     },
     "work": [
         {
-            "company": "Teambridge",
+            "name": "Teambridge",
             "position": "Software Engineer",
-            "website": "https://www.teambridge.com/",
+            "url": "https://www.teambridge.com/",
             "startDate": "2025-10-01",
             "summary": "Workforce management built for the frontline.",
             "highlights": [
@@ -35,9 +34,9 @@
             ]
         },
         {
-            "company": "GraphWear Technologies Inc.",
+            "name": "GraphWear Technologies Inc.",
             "position": "Senior Software Engineer",
-            "website": "http://www.graphwear.co/",
+            "url": "http://www.graphwear.co/",
             "startDate": "2021-10-01",
             "endDate": "2025-10-01",
             "summary": "The world's first needle-free continuous glucose monitoring wearable.",
@@ -50,15 +49,15 @@
             ]
         },
         {
-            "company": "Verge Inc",
+            "name": "Verge Inc.",
             "position": "Software Engineer",
-            "website": "https://webhr.co/",
+            "url": "https://webhr.co/",
             "startDate": "2018-12-01",
             "endDate": "2021-10-01",
             "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
             "highlights": [
                 "Collaborated with 20+ partner companies to implement cross-platform features and integrations, creating seamless syncing between the two platforms.",
-                "Single-handedly design, implemented, and deployed company payroll/taxes system for all US and Canadian clients.",
+                "Single-handedly designed, implemented, and deployed company payroll/taxes system for all US and Canadian clients.",
                 "Lead the company in key cybersecurity certifications and implementations, netting the company several key clients."
             ]
         }
@@ -66,15 +65,9 @@
     "education": [
         {
             "institution": "San Jose State University",
+            "studyType": "B.S.",
             "area": "Computer Engineering",
-            "studyType": "Bachelor",
-            "_startDate": "2009-06-01",
-            "endDate": "2017-12-01",
-            "_gpa": "3.0",
-            "_courses": [
-                "DB1101 - Basic SQL",
-                "CS2011 - Java Introduction"
-            ]
+            "endDate": "2017-12-01"
         }
     ],
     "skills": [
@@ -112,6 +105,7 @@
             "name": "iOS Development",
             "keywords": [
                 "Swift",
+                "Flutter",
                 "Objective-C",
                 "UIKit",
                 "SwiftUI",
@@ -153,7 +147,7 @@
             ]
         },
         {
-            "name": "Tools/Frameworks",
+            "name": "Tools",
             "keywords": [
                 "Git",
                 "VSCode",
@@ -165,33 +159,43 @@
             ]
         }
     ],
-    "languages": [
+    "projects": [
         {
-            "language": "English",
-            "fluency": "Native speaker"
+            "name": "Manufacturing Execution System",
+            "highlights": [
+                "Ruby on Rails web app with iOS companion app that tracks medical sensors over its manufacturing from raw materials to finished product, logging fields such as quality assurance checks, batch numbers, operators, and timestamps for each operation.",
+                "Used Ruby on Rails, SideKiq, Redis, Postgres, and SemanticUI for the web app and Swift, SwiftUI, and UIKit for the iOS app.",
+                "Designed the system to handle simultaneous multi-users that redefined the company workflow and boosted manufacturing efficiency, by removing error prone manual steps and replacing them with automated systems.",
+                "Delivered a flexible and robust system adaptable to a dynamic R&D environment while ensuring rigorous quality control for each process in keeping with FDA regulations."
+            ]
         },
         {
-            "language": "Chinese",
-            "fluency": "Basic understanding"
+            "name": "Data Processing Task Server",
+            "highlights": [
+                "Python based web dashboard that analyzed live data to generate detailed charts and graphs, greatly informing the team with real-time results.",
+                "Built with Python, Flask, Celery, Plotly, Numpy, Pandas, and Postgres. And hosted on AWS EC2, allowing users to request charts or calculations through a web API.",
+                "Optimized calculations to process millions of data points concurrently and produce charts in under 10 seconds, with caching of data further reducing response time and load on databases.",
+                "Designed architecture to be fast, flexible and maintainable; making adding or changing the chart outputs trivial and fast, keeping up with a fast R&D environment."
+            ]
         }
     ],
     "interests": [
         {
-            "name": "Self-Hosting",
+            "name": "Self Hosting",
             "keywords": [
                 "Open-source",
                 "Sys Admin",
-                "Virtual Machines",
+                "VMs",
                 "Docker",
                 "LLMs"
             ]
         },
         {
-            "name": "Game Development",
+            "name": "Game Dev",
             "keywords": [
                 "Unity3d",
-                "Love2d",
-                "Procedural generation"
+                "C#",
+                "Lua"
             ]
         }
     ]

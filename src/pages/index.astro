@@ -1,0 +1,176 @@
+---
+import '../styles/global.css';
+import SectionTitle from '../components/SectionTitle.astro';
+import WorkEntry from '../components/WorkEntry.astro';
+import resume from '../../resume.json';
+
+const { basics, work, education, skills, projects } = resume;
+
+function fmt(d: string) {
+  if (!d) return 'Present';
+  const [year, month] = d.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{basics.name} — Resume</title>
+  <meta name="description" content={basics.summary} />
+</head>
+<body class="min-h-screen py-16 px-6">
+  <main class="max-w-[760px] mx-auto">
+
+    <!-- Header -->
+    <header class="border-b border-rule pb-8 mb-12 animate-rise">
+      <h1 class="font-display text-5xl md:text-6xl leading-none tracking-tight mb-2">
+        {basics.name}
+      </h1>
+      <div class="text-xs font-medium tracking-widest uppercase text-accent mb-5">
+        {basics.label}
+      </div>
+
+      <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted mb-4">
+        {basics.email && (
+          <a href={`mailto:${basics.email}`} class="hover:text-accent transition-colors">
+            {basics.email}
+          </a>
+        )}
+        {basics.phone && <span>{basics.phone}</span>}
+        {basics.url && (
+          <a href={basics.url} target="_blank" class="hover:text-accent transition-colors">
+            {basics.url.replace(/^https?:\/\//, '')}
+          </a>
+        )}
+        {basics.location?.city && (
+          <span>{basics.location.city}, {basics.location.region}</span>
+        )}
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a
+          href="/resume.pdf"
+          download
+          class="group inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase border border-accent text-accent px-4 py-2 rounded-full hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-sm transition-all"
+        >
+          <span class="inline-block transition-transform group-hover:translate-y-0.5">↓</span> Download PDF
+        </a>
+      </div>
+
+      {basics.summary && (
+        <p class="mt-5 text-[0.95rem] leading-relaxed text-ink/75 max-w-prose">
+          {basics.summary}
+        </p>
+      )}
+    </header>
+
+    <!-- Skills -->
+    {skills?.length && (
+      <section class="mb-10 animate-rise [animation-delay:120ms]">
+        <SectionTitle title="Skills" />
+        <div class="space-y-2.5">
+          {skills.map(s => (
+            <div class="flex items-baseline gap-4">
+              <span class="text-[0.7rem] font-medium tracking-widest uppercase text-muted w-24 shrink-0">
+                {s.name}
+              </span>
+              <div class="flex flex-wrap gap-1.5">
+                {s.keywords.map(k => (
+                  <span class="text-xs bg-rule/60 text-ink/80 px-2.5 py-1 rounded-full">
+                    {k}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Experience -->
+    {work?.length && (
+      <section class="mb-10 animate-rise [animation-delay:200ms]">
+        <SectionTitle title="Experience" />
+        <div class="space-y-7">
+          {work.map(job => (
+            <WorkEntry
+              position={job.position}
+              name={job.name}
+              url={job.url}
+              startDate={job.startDate}
+              endDate={job.endDate}
+              summary={job.summary}
+              highlights={job.highlights}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Education -->
+    {education?.length && (
+      <section class="mb-10 animate-rise [animation-delay:280ms]">
+        <SectionTitle title="Education" />
+        <div class="space-y-5">
+          {education.map(edu => (
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <div class="font-medium text-[0.95rem]">{edu.institution}</div>
+                <div class="text-sm text-muted mt-0.5">
+                  {edu.studyType} {edu.area}
+                  {edu.score && <span class="ml-2 text-xs">· {edu.score} GPA</span>}
+                </div>
+              </div>
+              <div class="text-xs text-muted font-mono whitespace-nowrap shrink-0 pt-0.5">
+                {edu.startDate ? `${fmt(edu.startDate)} – ${fmt(edu.endDate)}` : fmt(edu.endDate)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Projects -->
+    {projects?.length && (
+      <section class="mb-10 animate-rise [animation-delay:360ms]">
+        <SectionTitle title="Projects" />
+        <div class="space-y-6">
+          {projects.map(p => (
+            <div>
+              <div class="flex justify-between items-start gap-4 mb-1.5">
+                <div>
+                  <div class="font-medium text-[0.95rem]">
+                    {p.url
+                      ? <a href={p.url} target="_blank" class="hover:text-accent transition-colors border-b border-rule hover:border-accent">{p.name}</a>
+                      : p.name}
+                  </div>
+                  <div class="text-sm text-muted mt-0.5">{p.description}</div>
+                </div>
+                {p.keywords?.length && (
+                  <div class="text-xs text-muted font-mono whitespace-nowrap shrink-0 pt-0.5 text-right">
+                    {p.keywords.join(' · ')}
+                  </div>
+                )}
+              </div>
+              {p.highlights?.length && (
+                <ul class="space-y-1 mt-2">
+                  {p.highlights.map(h => (
+                    <li class="text-sm text-ink/70 pl-4 relative leading-snug before:content-['–'] before:absolute before:left-0 before:text-accent">
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+  </main>
+</body>
+</html>

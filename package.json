@@ -1,0 +1,22 @@
+{
+  "name": "resume-as-code",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "build:pdf": "mkdir -p dist && typst compile typst/resume.typ dist/resume.pdf --font-path typst/fonts --root .",
+    "watch:pdf": "mkdir -p dist && typst watch typst/resume.typ dist/resume.pdf --font-path typst/fonts --root .",
+    "validate": "resumed validate resume.json"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.16.0",
+    "resumed": "^6.1.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
