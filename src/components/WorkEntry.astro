@@ -9,14 +9,9 @@ interface Props {
   highlights?: string[];
 }
 
-const { position, name, url, startDate, endDate, summary, highlights } = Astro.props;
+import { fmtDate } from '../lib/format';
 
-function fmt(d: string) {
-  if (!d) return 'Present';
-  const [year, month] = d.split('-');
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  return `${months[parseInt(month) - 1]} ${year}`;
-}
+const { position, name, url, startDate, endDate, summary, highlights } = Astro.props;
 ---
 
 <div class="entry group">
@@ -30,7 +25,7 @@ function fmt(d: string) {
       </div>
     </div>
     <div class="text-xs text-muted whitespace-nowrap font-mono pt-0.5 shrink-0">
-      {fmt(startDate)} – {fmt(endDate || '')}
+      {fmtDate(startDate)} – {fmtDate(endDate)}
     </div>
   </div>
   {summary && <p class="text-sm text-ink/70 mb-2 leading-relaxed">{summary}</p>}

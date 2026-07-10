@@ -1,7 +1,4 @@
-// resume.typ
-// Reads the standard JSON Resume schema (https://jsonresume.org/schema/) and
-// typesets a clean single-column PDF.
-// Compile: typst compile typst/resume.typ dist/resume.pdf --font-path typst/fonts
+// Typesets resume.json (JSON Resume schema) as a single-column PDF.
 
 #let d = json("../resume.json")
 
@@ -12,7 +9,6 @@
 #set text(font: "IBM Plex Sans", size: 10.5pt, fallback: false)
 #set par(leading: 0.65em)
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
 #let months = (
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
@@ -49,7 +45,6 @@
   }
 }
 
-// ─── Header ──────────────────────────────────────────────────────────────────
 #let basics = d.basics
 
 #text(size: 22pt, weight: "bold")[#basics.name]
@@ -80,7 +75,6 @@
 #v(0.3em)
 #line(length: 100%, stroke: 0.5pt + accent)
 
-// ─── Summary ─────────────────────────────────────────────────────────────────
 #{
   let s = basics.at("summary", default: "")
   if s != "" {
@@ -90,7 +84,6 @@
   }
 }
 
-// ─── Skills ──────────────────────────────────────────────────────────────────
 #{
   let items = d.at("skills", default: ())
   if items.len() > 0 {
@@ -104,7 +97,6 @@
   }
 }
 
-// ─── Experience ──────────────────────────────────────────────────────────────
 #{
   let items = d.at("work", default: ())
   if items.len() > 0 {
@@ -131,7 +123,6 @@
   }
 }
 
-// ─── Projects ────────────────────────────────────────────────────────────────
 #{
   let items = d.at("projects", default: ())
   if items.len() > 0 {
@@ -153,7 +144,6 @@
   }
 }
 
-// ─── Education ───────────────────────────────────────────────────────────────
 #{
   let items = d.at("education", default: ())
   if items.len() > 0 {
@@ -175,7 +165,6 @@
   }
 }
 
-// ─── Interests ───────────────────────────────────────────────────────────────
 #{
   let items = d.at("interests", default: ())
   if items.len() > 0 {
