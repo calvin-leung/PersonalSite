@@ -28,10 +28,14 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        # Use `npm install`, not `npm ci`: the committed lockfile bakes in the
-        # host platform's optional-dependency resolution, so `npm ci` fails to
-        # install rollup's Linux binary on the runner (npm/cli#4828).
-        run: npm install --no-audit --no-fund
+        # The committed lockfile was generated on Windows and bakes in that
+        # platform's optional-dependency resolution, so neither `npm ci` nor
+        # `npm install` will install rollup's Linux binary on the runner
+        # (npm/cli#4828). Removing the lockfile forces a clean per-platform
+        # resolve — exactly what the rollup error message instructs.
+        run: |
+          rm -f package-lock.json
+          npm install --no-audit --no-fund
 
       - name: Validate resume.json against JSON Resume schema
         run: npm run validate
