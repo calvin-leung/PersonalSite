@@ -28,7 +28,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # Use `npm install`, not `npm ci`: the committed lockfile bakes in the
+        # host platform's optional-dependency resolution, so `npm ci` fails to
+        # install rollup's Linux binary on the runner (npm/cli#4828).
+        run: npm install --no-audit --no-fund
 
       - name: Validate resume.json against JSON Resume schema
         run: npm run validate
