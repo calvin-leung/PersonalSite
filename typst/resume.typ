@@ -4,6 +4,8 @@
 
 #let d = json("../resume.json")
 
+#set document(title: d.basics.name + " — Resume", author: d.basics.name)
+
 // ── palette ──────────────────────────────────────────────────────────────
 #let accent = rgb("c2410c") // burnt orange, matches the site
 #let ink    = rgb("1a1a1a")

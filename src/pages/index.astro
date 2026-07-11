@@ -108,7 +108,7 @@ const updated = new Date().toLocaleDateString('en-US', { month: 'short', year: '
 
         <a
           href="/resume.pdf"
-          download
+          download={`${basics.name} — Resume.pdf`}
           class="group inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase border border-accent text-accent px-4 py-2 rounded-full hover:bg-accent hover:text-paper hover:-translate-y-0.5 hover:shadow-sm transition-all"
         >
           <span class="inline-block transition-transform group-hover:translate-y-0.5">↓</span> Download
