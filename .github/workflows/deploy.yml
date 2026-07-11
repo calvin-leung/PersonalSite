@@ -34,6 +34,9 @@ jobs:
       - name: Validate resume.json against JSON Resume schema
         run: npm run validate
 
+      - name: Type-check Astro site
+        run: npm run check
+
       - name: Build Astro site
         run: npm run build
 

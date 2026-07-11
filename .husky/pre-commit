@@ -1,0 +1,2 @@
+# Format staged files before they're committed (fast).
+npx lint-staged

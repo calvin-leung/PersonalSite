@@ -8,7 +8,14 @@
     "preview": "astro preview",
     "build:pdf": "mkdir -p dist && typst compile typst/resume.typ dist/resume.pdf --font-path typst/fonts --root .",
     "watch:pdf": "mkdir -p dist && typst watch typst/resume.typ dist/resume.pdf --font-path typst/fonts --root .",
-    "validate": "resumed validate resume.json"
+    "validate": "resumed validate resume.json",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{astro,ts,js,mjs,cjs,css,json,md}": "prettier --write"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
@@ -20,6 +27,14 @@
     "tailwindcss": "^3.4.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.12"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.9.5",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
   }
 }

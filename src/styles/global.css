@@ -38,7 +38,11 @@
 
   html {
     @apply bg-paper text-ink;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -52,7 +56,11 @@
   }
 
   .hero-glow {
-    background: radial-gradient(55% 65% at 30% 0%, rgb(var(--accent) / var(--glow)), transparent 70%);
+    background: radial-gradient(
+      55% 65% at 30% 0%,
+      rgb(var(--accent) / var(--glow)),
+      transparent 70%
+    );
   }
 }
 
@@ -75,8 +83,9 @@
   .js .reveal {
     opacity: 0;
     transform: translateY(18px);
-    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .js .reveal.is-visible {
     opacity: 1;
@@ -87,8 +96,9 @@
   .js .reveal .stagger {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .js .reveal.is-visible .stagger {
     opacity: 1;
@@ -101,19 +111,31 @@
     background-size: 0% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.3s ease, color 0.2s ease;
+    transition:
+      background-size 0.3s ease,
+      color 0.2s ease;
   }
   .link-underline:hover {
     background-size: 100% 1px;
   }
 
   /* Theme-toggle icon visibility mirrors the color-var logic. */
-  .icon-sun { display: none; }
-  :root[data-theme='dark'] .icon-sun { display: block; }
-  :root[data-theme='dark'] .icon-moon { display: none; }
+  .icon-sun {
+    display: none;
+  }
+  :root[data-theme='dark'] .icon-sun {
+    display: block;
+  }
+  :root[data-theme='dark'] .icon-moon {
+    display: none;
+  }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) .icon-sun { display: block; }
-    :root:not([data-theme]) .icon-moon { display: none; }
+    :root:not([data-theme]) .icon-sun {
+      display: block;
+    }
+    :root:not([data-theme]) .icon-moon {
+      display: none;
+    }
   }
 }
 

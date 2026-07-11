@@ -1,202 +1,154 @@
 {
-    "basics": {
-        "name": "Calvin Leung",
-        "label": "Software Engineer",
-        "email": "CalvinL.Work@gmail.com",
-        "phone": "(209) 666-4419",
-        "url": "https://www.calvinl.net",
-        "summary": "Software Engineer with 7+ years building reliable, high-scale systems across full-stack web, iOS, and data engineering. Delivered real-time infrastructure, cross-platform apps, and automation tools used across hundreds of clients. Proven track record delivering high-impact features — from real-time chat systems handling millions of messages to iOS manufacturing apps and data pipelines processing 200M+ data points annually.",
-        "location": {
-            "city": "San Francisco",
-            "countryCode": "US",
-            "region": "California"
-        },
-        "profiles": [
-            {
-                "network": "GitHub",
-                "username": "calvin-leung",
-                "url": "https://github.com/calvin-leung"
-            }
-        ]
+  "basics": {
+    "name": "Calvin Leung",
+    "label": "Software Engineer",
+    "email": "CalvinL.Work@gmail.com",
+    "phone": "(209) 666-4419",
+    "url": "https://www.calvinl.net",
+    "summary": "Software Engineer with 7+ years building reliable, high-scale systems across full-stack web, iOS, and data engineering. Delivered real-time infrastructure, cross-platform apps, and automation tools used across hundreds of clients. Proven track record delivering high-impact features — from real-time chat systems handling millions of messages to iOS manufacturing apps and data pipelines processing 200M+ data points annually.",
+    "location": {
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
     },
-    "work": [
-        {
-            "name": "Teambridge",
-            "position": "Software Engineer",
-            "url": "https://www.teambridge.com/",
-            "startDate": "2025-10-01",
-            "summary": "Workforce management built for the frontline.",
-            "highlights": [
-                "Designed and shipped real-time chat system supporting over 5 million individual messages and led zero-downtime backfill job to migrate historical data",
-                "Led major refactor of timeoff system, delivering critical features with over 90 million entries over 300+ clients. 10x improvement in performance after refactor",
-                "Worked on complex automation system. Enables over 25,000 different automations that unlocks new workflows for customer",
-                "System wide optimizations & bug fixes touching nearly every major product surface. Consistent bug fix and polish work alongside feature delivery (regressions, edge cases, database performance)"
-            ]
-        },
-        {
-            "name": "GraphWear Technologies Inc.",
-            "position": "Senior Software Engineer",
-            "url": "http://www.graphwear.co/",
-            "startDate": "2021-10-01",
-            "endDate": "2025-10-01",
-            "summary": "The world's first needle-free continuous glucose monitoring wearable.",
-            "highlights": [
-                "Worked on critical internal web dashboards, allowing teams to monitor and parse millions of data points in real-time across 7+ days.",
-                "Designed and built iOS application for company's manufacturing execution system (MES), enabling teams to track and log every step of the manufacturing process, reducing manual data entry by 10x.",
-                "Developed a scalable and adaptable data pipeline from bluetooth device, to iOS app, to API server capable of ingesting up to 200 million data points a year.",
-                "Collaborated with hardware and data engineering teams to develop a robust protocol for sending real-time data wirelessly between the hardware and iOS app, enabling a 15x increase in data throughput.",
-                "Created a python-based web server responsible for parsing millions of data points and automating tasks performed by the data science team, greatly reducing manual workload for the entire company."
-            ]
-        },
-        {
-            "name": "Verge Inc.",
-            "position": "Software Engineer",
-            "url": "https://webhr.co/",
-            "startDate": "2018-12-01",
-            "endDate": "2021-10-01",
-            "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
-            "highlights": [
-                "Collaborated with 20+ partner companies to implement cross-platform features and integrations, creating seamless syncing between the two platforms.",
-                "Single-handedly designed, implemented, and deployed company payroll/taxes system for all US and Canadian clients.",
-                "Lead the company in key cybersecurity certifications and implementations, netting the company several key clients."
-            ]
-        }
-    ],
-    "education": [
-        {
-            "institution": "San Jose State University",
-            "studyType": "B.S.",
-            "area": "Computer Engineering",
-            "endDate": "2017-12-01"
-        }
-    ],
-    "skills": [
-        {
-            "name": "Programming Languages",
-            "keywords": [
-                "Kotlin",
-                "Python",
-                "Java",
-                "Swift",
-                "Ruby",
-                "PHP",
-                "Javascript",
-                "C#",
-                "Lua"
-            ]
-        },
-        {
-            "name": "Web Development",
-            "keywords": [
-                "React",
-                "Node.js",
-                "TypeScript",
-                "Javascript",
-                "Ruby on Rails",
-                "HTML/CSS",
-                "Vue",
-                "FastAPI",
-                "Flask",
-                "Django",
-                "JSON"
-            ]
-        },
-        {
-            "name": "iOS Development",
-            "keywords": [
-                "Swift",
-                "Flutter",
-                "Objective-C",
-                "UIKit",
-                "SwiftUI",
-                "Core Data",
-                "Xcode",
-                "Core Bluetooth"
-            ]
-        },
-        {
-            "name": "Databases",
-            "keywords": [
-                "PostgreSQL",
-                "SQLite",
-                "MySQL",
-                "MongoDB",
-                "Redis"
-            ]
-        },
-        {
-            "name": "Cloud Computing",
-            "keywords": [
-                "Docker",
-                "AWS",
-                "EC2",
-                "ECS",
-                "RDS",
-                "VMs",
-                "VPS",
-                "Websockets"
-            ]
-        },
-        {
-            "name": "Networking",
-            "keywords": [
-                "RESTful APIs",
-                "JSON",
-                "Bluetooth",
-                "Websockets"
-            ]
-        },
-        {
-            "name": "Tools",
-            "keywords": [
-                "Git",
-                "VSCode",
-                "Version Control",
-                "AI",
-                "Agile",
-                "Unit Testing",
-                "LLM"
-            ]
-        }
-    ],
-    "projects": [
-        {
-            "name": "Manufacturing Execution System",
-            "highlights": [
-                "Ruby on Rails web app with iOS companion app that tracks medical sensors over its manufacturing from raw materials to finished product, logging fields such as quality assurance checks, batch numbers, operators, and timestamps for each operation.",
-                "Used Ruby on Rails, SideKiq, Redis, Postgres, and SemanticUI for the web app and Swift, SwiftUI, and UIKit for the iOS app.",
-                "Designed the system to handle simultaneous multi-users that redefined the company workflow and boosted manufacturing efficiency, by removing error prone manual steps and replacing them with automated systems.",
-                "Delivered a flexible and robust system adaptable to a dynamic R&D environment while ensuring rigorous quality control for each process in keeping with FDA regulations."
-            ]
-        },
-        {
-            "name": "Data Processing Task Server",
-            "highlights": [
-                "Python based web dashboard that analyzed live data to generate detailed charts and graphs, greatly informing the team with real-time results.",
-                "Built with Python, Flask, Celery, Plotly, Numpy, Pandas, and Postgres. And hosted on AWS EC2, allowing users to request charts or calculations through a web API.",
-                "Optimized calculations to process millions of data points concurrently and produce charts in under 10 seconds, with caching of data further reducing response time and load on databases.",
-                "Designed architecture to be fast, flexible and maintainable; making adding or changing the chart outputs trivial and fast, keeping up with a fast R&D environment."
-            ]
-        }
-    ],
-    "interests": [
-        {
-            "name": "Self Hosting",
-            "keywords": [
-                "Open-source",
-                "Sys Admin",
-                "VMs",
-                "Docker",
-                "LLMs"
-            ]
-        },
-        {
-            "name": "Game Dev",
-            "keywords": [
-                "Unity3d",
-                "C#",
-                "Lua"
-            ]
-        }
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "calvin-leung",
+        "url": "https://github.com/calvin-leung"
+      }
     ]
+  },
+  "work": [
+    {
+      "name": "Teambridge",
+      "position": "Software Engineer",
+      "url": "https://www.teambridge.com/",
+      "startDate": "2025-10-01",
+      "summary": "Workforce management built for the frontline.",
+      "highlights": [
+        "Designed and shipped real-time chat system supporting over 5 million individual messages and led zero-downtime backfill job to migrate historical data",
+        "Led major refactor of timeoff system, delivering critical features with over 90 million entries over 300+ clients. 10x improvement in performance after refactor",
+        "Worked on complex automation system. Enables over 25,000 different automations that unlocks new workflows for customer",
+        "System wide optimizations & bug fixes touching nearly every major product surface. Consistent bug fix and polish work alongside feature delivery (regressions, edge cases, database performance)"
+      ]
+    },
+    {
+      "name": "GraphWear Technologies Inc.",
+      "position": "Senior Software Engineer",
+      "url": "http://www.graphwear.co/",
+      "startDate": "2021-10-01",
+      "endDate": "2025-10-01",
+      "summary": "The world's first needle-free continuous glucose monitoring wearable.",
+      "highlights": [
+        "Worked on critical internal web dashboards, allowing teams to monitor and parse millions of data points in real-time across 7+ days.",
+        "Designed and built iOS application for company's manufacturing execution system (MES), enabling teams to track and log every step of the manufacturing process, reducing manual data entry by 10x.",
+        "Developed a scalable and adaptable data pipeline from bluetooth device, to iOS app, to API server capable of ingesting up to 200 million data points a year.",
+        "Collaborated with hardware and data engineering teams to develop a robust protocol for sending real-time data wirelessly between the hardware and iOS app, enabling a 15x increase in data throughput.",
+        "Created a python-based web server responsible for parsing millions of data points and automating tasks performed by the data science team, greatly reducing manual workload for the entire company."
+      ]
+    },
+    {
+      "name": "Verge Inc.",
+      "position": "Software Engineer",
+      "url": "https://webhr.co/",
+      "startDate": "2018-12-01",
+      "endDate": "2021-10-01",
+      "summary": "Cloud Based Social HR Software. From hire to retire in the most advanced way.",
+      "highlights": [
+        "Collaborated with 20+ partner companies to implement cross-platform features and integrations, creating seamless syncing between the two platforms.",
+        "Single-handedly designed, implemented, and deployed company payroll/taxes system for all US and Canadian clients.",
+        "Lead the company in key cybersecurity certifications and implementations, netting the company several key clients."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "San Jose State University",
+      "studyType": "B.S.",
+      "area": "Computer Engineering",
+      "endDate": "2017-12-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Kotlin", "Python", "Java", "Swift", "Ruby", "PHP", "Javascript", "C#", "Lua"]
+    },
+    {
+      "name": "Web Development",
+      "keywords": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Javascript",
+        "Ruby on Rails",
+        "HTML/CSS",
+        "Vue",
+        "FastAPI",
+        "Flask",
+        "Django",
+        "JSON"
+      ]
+    },
+    {
+      "name": "iOS Development",
+      "keywords": [
+        "Swift",
+        "Flutter",
+        "Objective-C",
+        "UIKit",
+        "SwiftUI",
+        "Core Data",
+        "Xcode",
+        "Core Bluetooth"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": ["PostgreSQL", "SQLite", "MySQL", "MongoDB", "Redis"]
+    },
+    {
+      "name": "Cloud Computing",
+      "keywords": ["Docker", "AWS", "EC2", "ECS", "RDS", "VMs", "VPS", "Websockets"]
+    },
+    {
+      "name": "Networking",
+      "keywords": ["RESTful APIs", "JSON", "Bluetooth", "Websockets"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Git", "VSCode", "Version Control", "AI", "Agile", "Unit Testing", "LLM"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Manufacturing Execution System",
+      "highlights": [
+        "Ruby on Rails web app with iOS companion app that tracks medical sensors over its manufacturing from raw materials to finished product, logging fields such as quality assurance checks, batch numbers, operators, and timestamps for each operation.",
+        "Used Ruby on Rails, SideKiq, Redis, Postgres, and SemanticUI for the web app and Swift, SwiftUI, and UIKit for the iOS app.",
+        "Designed the system to handle simultaneous multi-users that redefined the company workflow and boosted manufacturing efficiency, by removing error prone manual steps and replacing them with automated systems.",
+        "Delivered a flexible and robust system adaptable to a dynamic R&D environment while ensuring rigorous quality control for each process in keeping with FDA regulations."
+      ]
+    },
+    {
+      "name": "Data Processing Task Server",
+      "highlights": [
+        "Python based web dashboard that analyzed live data to generate detailed charts and graphs, greatly informing the team with real-time results.",
+        "Built with Python, Flask, Celery, Plotly, Numpy, Pandas, and Postgres. And hosted on AWS EC2, allowing users to request charts or calculations through a web API.",
+        "Optimized calculations to process millions of data points concurrently and produce charts in under 10 seconds, with caching of data further reducing response time and load on databases.",
+        "Designed architecture to be fast, flexible and maintainable; making adding or changing the chart outputs trivial and fast, keeping up with a fast R&D environment."
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Self Hosting",
+      "keywords": ["Open-source", "Sys Admin", "VMs", "Docker", "LLMs"]
+    },
+    {
+      "name": "Game Dev",
+      "keywords": ["Unity3d", "C#", "Lua"]
+    }
+  ]
 }

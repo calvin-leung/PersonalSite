@@ -1,0 +1,14 @@
+# Push to master deploys straight to the live site, so mirror CI locally
+# and refuse the push if anything that would break the deploy fails.
+set -e
+
+echo "▶ Validating resume.json against JSON Resume schema…"
+npm run validate
+
+echo "▶ Type/template check (astro check)…"
+npm run check
+
+echo "▶ Building Astro site…"
+npm run build
+
+echo "✓ Pre-push checks passed."
