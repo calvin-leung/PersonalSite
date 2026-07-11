@@ -13,7 +13,7 @@ public/CNAME             custom domain, copied into the build output
 
 ## Setup
 
-1. Push to your repo's `master` branch.
+1. Push to repo's `master` branch.
 2. Repo → **Settings → Pages → Source: GitHub Actions**.
 3. For a custom domain, set it in `public/CNAME` (one host per line).
 

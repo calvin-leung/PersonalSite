@@ -1,35 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --paper: 249 248 246;
+    --ink: 24 22 20;
+    --muted: 120 113 108;
+    --rule: 226 223 219;
+    --accent: 194 65 12;
+    --grain: 0.05;
+    --glow: 0.06;
+  }
+
+  /* Auto dark: applies only when the user hasn't picked a theme explicitly. */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --paper: 17 16 15;
+      --ink: 235 231 225;
+      --muted: 148 141 133;
+      --rule: 43 40 37;
+      --accent: 234 118 58;
+      --grain: 0.08;
+      --glow: 0.14;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --paper: 17 16 15;
+    --ink: 235 231 225;
+    --muted: 148 141 133;
+    --rule: 43 40 37;
+    --accent: 234 118 58;
+    --grain: 0.08;
+    --glow: 0.14;
+  }
+
   html {
     @apply bg-paper text-ink;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .font-serif {
+    font-optical-sizing: auto;
+  }
+
   ::selection {
-    background: #c2410c22;
+    background: rgb(var(--accent) / 0.18);
+  }
+
+  .hero-glow {
+    background: radial-gradient(55% 65% at 30% 0%, rgb(var(--accent) / var(--glow)), transparent 70%);
+  }
+}
+
+@layer base {
+  /* Fixed grain overlay for a subtle paper tooth in both themes. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: var(--grain);
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
 
 @layer utilities {
-  .animate-rise {
-    animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* Scroll reveal — only active once JS has flagged the document. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Per-item stagger inside a revealed section. */
+  .js .reveal .stagger {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .js .reveal.is-visible .stagger {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Wipe-in underline for inline links. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, color 0.2s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  /* Theme-toggle icon visibility mirrors the color-var logic. */
+  .icon-sun { display: none; }
+  :root[data-theme='dark'] .icon-sun { display: block; }
+  :root[data-theme='dark'] .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) .icon-sun { display: block; }
+    :root:not([data-theme]) .icon-moon { display: none; }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-rise {
-    animation: none;
+  .js .reveal,
+  .js .reveal .stagger {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

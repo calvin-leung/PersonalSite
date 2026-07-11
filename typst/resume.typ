@@ -2,7 +2,7 @@
 
 #let d = json("../resume.json")
 
-#let accent = rgb("dc2626")
+#let accent = rgb("c2410c")
 #let muted  = rgb("666666")
 
 #set page(width: 595.92pt, height: auto, margin: (x: 20mm, y: 20mm))

@@ -1,41 +1,39 @@
 ---
-interface Props {
-  position: string;
-  name: string;
-  url?: string;
-  startDate: string;
-  endDate?: string;
-  summary?: string;
-  highlights?: string[];
-}
-
 import { fmtDate } from '../lib/format';
 
-const { position, name, url, startDate, endDate, summary, highlights } = Astro.props;
+const { position, name, url, startDate, endDate, summary, highlights, index = 0 } = Astro.props;
 ---
 
-<div class="entry group">
-  <div class="flex justify-between items-start gap-4 mb-1.5">
-    <div>
-      <div class="font-medium text-[0.95rem] text-ink">{position}</div>
-      <div class="text-muted text-sm mt-0.5">
-        {url
-          ? <a href={url} target="_blank" class="hover:text-accent transition-colors">{name}</a>
-          : name}
+<div class="stagger relative" style={`transition-delay:${index * 70}ms`}>
+  <div class="group -mr-4 rounded-lg py-2 pr-4 transition-colors duration-300 hover:bg-ink/[0.025]">
+    <span
+      class="absolute -left-8 top-[1rem] h-[9px] w-[9px] rounded-full bg-accent ring-4 ring-paper transition-transform duration-300 group-hover:scale-125"
+      aria-hidden="true"
+    ></span>
+    <div class="flex justify-between items-start gap-4 mb-1.5">
+      <div>
+        <div class="font-medium text-[0.95rem] text-ink transition-colors group-hover:text-accent">
+          {position}
+        </div>
+        <div class="text-muted text-sm mt-0.5">
+          {url
+            ? <a href={url} target="_blank" class="link-underline hover:text-accent">{name}</a>
+            : name}
+        </div>
+      </div>
+      <div class="text-xs text-muted whitespace-nowrap font-mono pt-1 shrink-0 tabular-nums">
+        {fmtDate(startDate)} – {fmtDate(endDate)}
       </div>
     </div>
-    <div class="text-xs text-muted whitespace-nowrap font-mono pt-0.5 shrink-0">
-      {fmtDate(startDate)} – {fmtDate(endDate)}
-    </div>
+    {summary && <p class="text-sm text-ink/65 mb-2 leading-relaxed">{summary}</p>}
+    {highlights?.length && (
+      <ul class="space-y-1.5">
+        {highlights.map(h => (
+          <li class="text-sm text-ink/70 pl-4 relative leading-relaxed before:content-['–'] before:absolute before:left-0 before:text-accent">
+            {h}
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
-  {summary && <p class="text-sm text-ink/70 mb-2 leading-relaxed">{summary}</p>}
-  {highlights?.length && (
-    <ul class="space-y-1">
-      {highlights.map(h => (
-        <li class="text-sm text-ink/70 pl-4 relative leading-snug before:content-['–'] before:absolute before:left-0 before:text-accent">
-          {h}
-        </li>
-      ))}
-    </ul>
-  )}
 </div>

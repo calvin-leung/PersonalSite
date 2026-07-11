@@ -1,4 +1,10 @@
 ---
+import '@fontsource-variable/fraunces/opsz.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
 import '../styles/global.css';
 import SectionTitle from '../components/SectionTitle.astro';
 import WorkEntry from '../components/WorkEntry.astro';
@@ -6,6 +12,15 @@ import { fmtDate } from '../lib/format';
 import resume from '../../resume.json';
 
 const { basics, work, education, skills, projects } = resume;
+
+const stats = [
+  { value: '7+', label: 'years experience' },
+  { value: '5M+', label: 'messages shipped' },
+  { value: '200M+', label: 'data points / yr' },
+];
+
+const year = new Date().getFullYear();
+const updated = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 ---
 
 <!DOCTYPE html>
@@ -13,58 +28,75 @@ const { basics, work, education, skills, projects } = resume;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{basics.name} — Resume</title>
   <meta name="description" content={basics.summary} />
+  <script is:inline>
+    document.documentElement.classList.add('js');
+    const t = localStorage.getItem('theme');
+    if (t) document.documentElement.dataset.theme = t;
+  </script>
 </head>
-<body class="min-h-screen py-16 px-6">
+<body id="top" class="relative min-h-screen py-16 px-6">
+  <div class="hero-glow pointer-events-none absolute inset-x-0 top-0 h-[480px] -z-10" aria-hidden="true"></div>
+  <button
+    id="theme-toggle"
+    type="button"
+    aria-label="Toggle color theme"
+    class="fixed top-5 right-5 z-50 grid place-items-center w-9 h-9 rounded-full border border-rule text-muted bg-paper/70 backdrop-blur-sm transition-colors hover:text-accent hover:border-accent"
+  >
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </button>
+
   <main class="max-w-[760px] mx-auto">
 
-    <header class="border-b border-rule pb-8 mb-12 animate-rise">
-      <h1 class="font-display text-5xl md:text-6xl leading-none tracking-tight mb-2">
+    <header class="reveal border-b border-rule pb-10 mb-14">
+      <h1 class="font-serif font-semibold text-[3.25rem] md:text-[4.5rem] leading-[0.95] tracking-[-0.02em] mb-3">
         {basics.name}
       </h1>
-      <div class="text-xs font-medium tracking-widest uppercase text-accent mb-5">
+      <div class="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-6">
         {basics.label}
       </div>
 
-      <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted mb-4">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted mb-7">
         {basics.email && (
-          <a href={`mailto:${basics.email}`} class="hover:text-accent transition-colors">
-            {basics.email}
-          </a>
+          <a href={`mailto:${basics.email}`} class="link-underline hover:text-accent">{basics.email}</a>
         )}
         {basics.phone && <span>{basics.phone}</span>}
-        {basics.url && (
-          <a href={basics.url} target="_blank" class="hover:text-accent transition-colors">
-            {basics.url.replace(/^https?:\/\//, '')}
-          </a>
-        )}
         {basics.location?.city && (
           <span>{basics.location.city}, {basics.location.region}</span>
         )}
       </div>
 
-      <div class="flex items-center gap-3">
-        <a
-          href="/resume.pdf"
-          download
-          class="group inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase border border-accent text-accent px-4 py-2 rounded-full hover:bg-accent hover:text-white hover:-translate-y-0.5 hover:shadow-sm transition-all"
-        >
-          <span class="inline-block transition-transform group-hover:translate-y-0.5">↓</span> Download PDF
-        </a>
-      </div>
+      <a
+        href="/resume.pdf"
+        download
+        class="group inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase border border-accent text-accent px-4 py-2 rounded-full hover:bg-accent hover:text-paper hover:-translate-y-0.5 hover:shadow-sm transition-all"
+      >
+        <span class="inline-block transition-transform group-hover:translate-y-0.5">↓</span> Download PDF
+      </a>
 
       {basics.summary && (
-        <p class="mt-5 text-[0.95rem] leading-relaxed text-ink/75 max-w-prose">
+        <p class="mt-8 text-[0.98rem] leading-relaxed text-ink/70 max-w-[64ch]">
           {basics.summary}
         </p>
       )}
+
+      <div class="mt-8 flex flex-wrap gap-x-12 gap-y-5 border-t border-rule pt-7">
+        {stats.map(s => (
+          <div>
+            <div class="font-serif text-3xl leading-none tracking-tight">{s.value}</div>
+            <div class="text-[0.7rem] uppercase tracking-widest text-muted mt-2">{s.label}</div>
+          </div>
+        ))}
+      </div>
     </header>
 
     {skills?.length && (
-      <section class="mb-10 animate-rise [animation-delay:120ms]">
-        <SectionTitle title="Skills" />
-        <div class="space-y-2.5">
+      <section class="reveal mb-14">
+        <SectionTitle title="Skills" num="01" />
+        <div class="space-y-3">
           {skills.map(s => (
             <div class="flex items-baseline gap-4">
               <span class="text-[0.7rem] font-medium tracking-widest uppercase text-muted w-24 shrink-0">
@@ -72,7 +104,7 @@ const { basics, work, education, skills, projects } = resume;
               </span>
               <div class="flex flex-wrap gap-1.5">
                 {s.keywords.map(k => (
-                  <span class="text-xs bg-rule/60 text-ink/80 px-2.5 py-1 rounded-full">
+                  <span class="text-xs bg-ink/[0.04] text-ink/70 px-2.5 py-1 rounded-md">
                     {k}
                   </span>
                 ))}
@@ -84,30 +116,34 @@ const { basics, work, education, skills, projects } = resume;
     )}
 
     {work?.length && (
-      <section class="mb-10 animate-rise [animation-delay:200ms]">
-        <SectionTitle title="Experience" />
-        <div class="space-y-7">
-          {work.map(job => (
-            <WorkEntry
-              position={job.position}
-              name={job.name}
-              url={job.url}
-              startDate={job.startDate}
-              endDate={job.endDate}
-              summary={job.summary}
-              highlights={job.highlights}
-            />
-          ))}
+      <section class="reveal mb-14">
+        <SectionTitle title="Experience" num="02" />
+        <div class="relative pl-8">
+          <span class="absolute left-[4px] top-3 bottom-3 w-px bg-rule" aria-hidden="true"></span>
+          <div class="space-y-5">
+            {work.map((job, i) => (
+              <WorkEntry
+                index={i}
+                position={job.position}
+                name={job.name}
+                url={job.url}
+                startDate={job.startDate}
+                endDate={job.endDate}
+                summary={job.summary}
+                highlights={job.highlights}
+              />
+            ))}
+          </div>
         </div>
       </section>
     )}
 
     {education?.length && (
-      <section class="mb-10 animate-rise [animation-delay:280ms]">
-        <SectionTitle title="Education" />
+      <section class="reveal mb-14">
+        <SectionTitle title="Education" num="03" />
         <div class="space-y-5">
-          {education.map(edu => (
-            <div class="flex justify-between items-start gap-4">
+          {education.map((edu, i) => (
+            <div class="stagger flex justify-between items-start gap-4" style={`transition-delay:${i * 70}ms`}>
               <div>
                 <div class="font-medium text-[0.95rem]">{edu.institution}</div>
                 <div class="text-sm text-muted mt-0.5">
@@ -115,7 +151,7 @@ const { basics, work, education, skills, projects } = resume;
                   {edu.score && <span class="ml-2 text-xs">· {edu.score} GPA</span>}
                 </div>
               </div>
-              <div class="text-xs text-muted font-mono whitespace-nowrap shrink-0 pt-0.5">
+              <div class="text-xs text-muted font-mono whitespace-nowrap shrink-0 pt-0.5 tabular-nums">
                 {edu.startDate ? `${fmtDate(edu.startDate)} – ${fmtDate(edu.endDate)}` : fmtDate(edu.endDate)}
               </div>
             </div>
@@ -125,19 +161,20 @@ const { basics, work, education, skills, projects } = resume;
     )}
 
     {projects?.length && (
-      <section class="mb-10 animate-rise [animation-delay:360ms]">
-        <SectionTitle title="Projects" />
-        <div class="space-y-6">
-          {projects.map(p => (
-            <div>
+      <section class="reveal mb-4">
+        <SectionTitle title="Projects" num="04" />
+        <div class="space-y-2">
+          {projects.map((p, i) => (
+            <div class="stagger" style={`transition-delay:${i * 70}ms`}>
+            <div class="group -mx-4 rounded-xl px-4 py-3 transition-colors duration-300 hover:bg-ink/[0.025]">
               <div class="flex justify-between items-start gap-4 mb-1.5">
                 <div>
-                  <div class="font-medium text-[0.95rem]">
+                  <div class="font-medium text-[0.95rem] transition-colors group-hover:text-accent">
                     {p.url
-                      ? <a href={p.url} target="_blank" class="hover:text-accent transition-colors border-b border-rule hover:border-accent">{p.name}</a>
+                      ? <a href={p.url} target="_blank" class="link-underline">{p.name}</a>
                       : p.name}
                   </div>
-                  <div class="text-sm text-muted mt-0.5">{p.description}</div>
+                  {p.description && <div class="text-sm text-muted mt-0.5">{p.description}</div>}
                 </div>
                 {p.keywords?.length && (
                   <div class="text-xs text-muted font-mono whitespace-nowrap shrink-0 pt-0.5 text-right">
@@ -146,14 +183,15 @@ const { basics, work, education, skills, projects } = resume;
                 )}
               </div>
               {p.highlights?.length && (
-                <ul class="space-y-1 mt-2">
+                <ul class="space-y-1.5 mt-2">
                   {p.highlights.map(h => (
-                    <li class="text-sm text-ink/70 pl-4 relative leading-snug before:content-['–'] before:absolute before:left-0 before:text-accent">
+                    <li class="text-sm text-ink/70 pl-4 relative leading-relaxed before:content-['–'] before:absolute before:left-0 before:text-accent">
                       {h}
                     </li>
                   ))}
                 </ul>
               )}
+            </div>
             </div>
           ))}
         </div>
@@ -161,5 +199,34 @@ const { basics, work, education, skills, projects } = resume;
     )}
 
   </main>
+
+  <footer class="max-w-[760px] mx-auto mt-20 pt-6 border-t border-rule flex flex-wrap items-center justify-between gap-4 text-xs text-muted">
+    <span>© {year} {basics.name}</span>
+    <span class="flex items-center gap-5">
+      <span>Updated {updated}</span>
+      <a href="#top" class="link-underline hover:text-accent">Back to top ↑</a>
+    </span>
+  </footer>
+
+  <script is:inline>
+    const btn = document.getElementById('theme-toggle');
+    const sysDark = () => matchMedia('(prefers-color-scheme: dark)').matches;
+    const current = () => document.documentElement.dataset.theme || (sysDark() ? 'dark' : 'light');
+    btn?.addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      }
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
 </body>
 </html>
